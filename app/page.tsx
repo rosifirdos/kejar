@@ -87,30 +87,30 @@ export default function Home() {
   };
 
   return (
-    <div className="flex-1 flex flex-col h-full overflow-hidden text-slate-300 selection:bg-blue-500/30 selection:text-white font-sans bg-[#0f1115]">
+    <div className="flex-1 flex flex-col h-full overflow-hidden text-green-500 selection:bg-green-500/30 selection:text-white font-mono bg-black">
       {/* Header */}
-      <header className="h-14 bg-[#161920] border-b border-slate-800 flex items-center justify-between px-6 shrink-0">
+      <header className="h-14 bg-[#0a0a0a] border-b border-green-900/50 flex items-center justify-between px-6 shrink-0">
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold text-white text-sm">KJ</div>
-            <h1 className="text-lg font-semibold tracking-tight text-white">KeJar <span className="text-slate-500 font-light">| Kendali Jaringan</span></h1>
+            <div className="w-8 h-8 bg-green-900/50 border border-green-500/30 rounded flex items-center justify-center font-bold text-green-400 text-sm">KJ</div>
+            <h1 className="text-lg font-bold tracking-tight text-green-500">KeJar <span className="text-green-700 font-light">| Kendali Jaringan</span></h1>
           </div>
-          <div className="h-4 w-[1px] bg-slate-700 mx-2"></div>
-          <div className="flex items-center gap-2 text-xs font-mono bg-slate-900 px-3 py-1 rounded border border-slate-800">
-            <span className="w-2 h-2 bg-emerald-500 rounded-full"></span>
-            <span className="text-emerald-500 uppercase tracking-wider">Core System Operational</span>
+          <div className="h-4 w-[1px] bg-green-900/50 mx-2"></div>
+          <div className="flex items-center gap-2 text-xs font-mono bg-[#050505] px-3 py-1 rounded border border-green-900/50">
+            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            <span className="text-green-500 uppercase tracking-wider">Core System Operational</span>
           </div>
         </div>
         <div className="flex items-center gap-6 text-xs uppercase tracking-widest font-medium">
           <div className="flex flex-col items-end">
-            <span className="text-slate-500">Service Uptime</span>
-            <span className="text-white">99.982%</span>
+            <span className="text-green-700">Service Uptime</span>
+            <span className="text-green-400">99.982%</span>
           </div>
           <div className="flex flex-col items-end">
-            <span className="text-slate-500">AI Confidence</span>
-            <span className="text-white">97.2%</span>
+            <span className="text-green-700">AI Confidence</span>
+            <span className="text-green-400">97.2%</span>
           </div>
-          <div className="h-8 w-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-white text-[10px]">
+          <div className="h-8 w-8 rounded bg-[#050505] border border-green-900/50 flex items-center justify-center text-green-500 text-[10px]">
              AI
           </div>
         </div>
@@ -119,8 +119,8 @@ export default function Home() {
       {/* Main Content */}
       <main className="flex-1 flex overflow-hidden">
         {/* Navigation Sidebar */}
-        <nav className="w-56 bg-[#161920] border-r border-slate-800 flex flex-col py-4 shrink-0">
-          <div className="px-4 mb-6 text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold">Main Console</div>
+        <nav className="w-56 bg-[#0a0a0a] border-r border-green-900/50 flex flex-col py-4 shrink-0">
+          <div className="px-4 mb-6 text-[10px] uppercase tracking-[0.2em] text-green-700 font-bold">Main Console</div>
           <div className="flex flex-col gap-1 px-2">
             {TABS.map((tab) => {
               const Icon = tab.icon;
@@ -131,8 +131,8 @@ export default function Home() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex items-center gap-3 px-3 py-2 text-sm transition-colors text-left ${
                     isActive 
-                      ? 'bg-blue-600/10 text-blue-400 border-l-2 border-blue-600 font-medium' 
-                      : 'hover:bg-slate-800 text-slate-400 border-l-2 border-transparent'
+                      ? 'bg-green-900/20 text-green-400 border-l-2 border-green-500 font-bold' 
+                      : 'hover:bg-green-900/10 text-green-600 border-l-2 border-transparent'
                   }`}
                 >
                   <Icon className="w-4 h-4 shrink-0" />
@@ -142,15 +142,15 @@ export default function Home() {
             })}
           </div>
 
-          <div className="mt-auto px-4 py-4 border-t border-slate-800">
-            <div className="bg-slate-900 rounded p-3 border border-slate-800">
-              <div className="text-[10px] text-slate-500 mb-1 uppercase font-mono">System Load</div>
-              <div className="h-1 bg-slate-800 rounded-full overflow-hidden">
-                <div className="w-1/3 h-full bg-blue-500"></div>
+          <div className="mt-auto px-4 py-4 border-t border-green-900/50">
+            <div className="bg-[#050505] rounded p-3 border border-green-900/50">
+              <div className="text-[10px] text-green-700 mb-1 uppercase font-mono">System Load</div>
+              <div className="h-1 bg-black rounded-full overflow-hidden border border-green-900/30">
+                <div className="w-1/3 h-full bg-green-500"></div>
               </div>
               <div className="mt-2 flex justify-between text-[10px] font-mono">
-                <span className="text-slate-400">AI Compute</span>
-                <span className="text-white">32%</span>
+                <span className="text-green-700">AI Compute</span>
+                <span className="text-green-400">32%</span>
               </div>
             </div>
           </div>
@@ -171,17 +171,17 @@ export default function Home() {
               <div className="flex gap-4 h-full overflow-hidden">
                 
                 {/* Input Panel */}
-                <div className="w-1/3 flex flex-col bg-[#1c202a] border border-slate-800 rounded shrink-0 shadow-sm overflow-hidden">
-                  <div className="p-3 border-b border-slate-800 bg-slate-900/50 flex justify-between items-center shrink-0">
-                    <h3 className="text-xs font-bold uppercase tracking-wider flex items-center gap-2">
-                       <activeTabData.icon className="w-4 h-4 text-blue-400" />
+                <div className="w-1/3 flex flex-col bg-[#050505] border border-green-900/50 rounded shrink-0 shadow-sm overflow-hidden">
+                  <div className="p-3 border-b border-green-900/50 bg-[#0a0a0a] flex justify-between items-center shrink-0">
+                    <h3 className="text-xs font-bold uppercase tracking-wider flex items-center gap-2 text-green-500">
+                       <activeTabData.icon className="w-4 h-4" />
                        Command Input
                     </h3>
                   </div>
                   <div className="flex-1 p-3 flex flex-col gap-3">
                     <textarea
                       autoFocus
-                      className="flex-1 w-full bg-[#0a0c10] border border-slate-800 rounded p-3 text-xs text-slate-300 font-mono focus:border-blue-500 focus:outline-none transition-colors resize-none placeholder:text-slate-600 leading-relaxed shadow-inner"
+                      className="flex-1 w-full bg-black border border-green-900/50 rounded p-3 text-xs text-green-400 font-mono focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500/50 transition-colors resize-none placeholder:text-green-900 leading-relaxed custom-scrollbar"
                       placeholder={activeTabData.placeholder}
                       value={inputs[activeTab]}
                       onChange={(e) => setInputs(prev => ({ ...prev, [activeTab]: e.target.value }))}
@@ -194,7 +194,7 @@ export default function Home() {
                     <button
                       onClick={() => handleSubmit()}
                       disabled={!inputs[activeTab].trim() || isLoading}
-                      className="flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-blue-600 hover:bg-blue-500 disabled:bg-slate-800 disabled:text-slate-500 disabled:cursor-not-allowed text-white text-xs uppercase tracking-wider font-bold rounded transition-colors shrink-0 shadow-sm"
+                      className="flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-green-900/20 border border-green-500/30 hover:bg-green-900/40 hover:border-green-500 text-green-400 disabled:bg-[#0a0a0a] disabled:border-green-900/30 disabled:text-green-900 disabled:cursor-not-allowed text-xs uppercase tracking-wider font-bold rounded transition-colors shrink-0"
                     >
                       {isLoading ? (
                         <Loader2 className="w-4 h-4 animate-spin" />
@@ -205,41 +205,41 @@ export default function Home() {
                         </>
                       )}
                     </button>
-                    <div className="text-[10px] text-slate-500 text-center font-mono uppercase">
+                    <div className="text-[10px] text-green-800 text-center font-mono uppercase">
                       [Ctrl + Enter] to execute
                     </div>
                   </div>
                 </div>
 
                 {/* Output Panel */}
-                <div className="flex-1 bg-[#1c202a] border border-slate-800 rounded flex flex-col shadow-sm overflow-hidden min-w-0">
-                  <div className="p-3 border-b border-slate-800 bg-slate-900/50 flex justify-between items-center shrink-0">
-                     <h3 className="text-xs font-bold uppercase tracking-wider">AI Insight Terminal</h3>
+                <div className="flex-1 bg-[#050505] border border-green-900/50 rounded flex flex-col shadow-sm overflow-hidden min-w-0">
+                  <div className="p-3 border-b border-green-900/50 bg-[#0a0a0a] flex justify-between items-center shrink-0">
+                     <h3 className="text-xs font-bold uppercase tracking-wider text-green-500">AI Insight Terminal</h3>
                      {results[activeTab] && (
-                       <span className="px-2 py-0.5 bg-emerald-500/10 text-emerald-400 rounded text-[10px] border border-emerald-500/20 font-mono">
+                       <span className="px-2 py-0.5 bg-green-500/10 text-green-400 rounded text-[10px] border border-green-500/20 font-mono">
                          OUTPUT GENERATED
                        </span>
                      )}
                   </div>
                   
-                  <div className="flex-1 overflow-y-auto p-4 custom-scrollbar">
+                  <div className="flex-1 overflow-y-auto p-4 custom-scrollbar text-green-500">
                     {isLoading ? (
                       <div className="h-full flex flex-col items-center justify-center font-mono text-[10px] uppercase space-y-4">
                         <div className="relative w-8 h-8">
-                           <div className="w-8 h-8 border-2 border-slate-800 rounded-full"></div>
-                           <div className="w-8 h-8 border-2 border-blue-500 rounded-full border-t-transparent animate-spin absolute inset-0"></div>
+                           <div className="w-8 h-8 border-2 border-green-900/50 rounded border-dashed animate-[spin_3s_linear_infinite]"></div>
+                           <div className="w-8 h-8 border-2 border-green-500 rounded border-t-transparent animate-spin absolute inset-0"></div>
                         </div>
-                        <div className="flex flex-col items-center gap-2 text-slate-500">
+                        <div className="flex flex-col items-center gap-2 text-green-600">
                           <p className="animate-pulse">Analyzing & Computing Model...</p>
                         </div>
                       </div>
                     ) : results[activeTab] ? (
-                      <div className="font-mono text-sm">
+                      <div className="font-mono text-sm leading-relaxed">
                         <MarkdownRenderer content={results[activeTab]!} />
                       </div>
                     ) : (
-                      <div className="h-full flex flex-col items-center justify-center text-slate-600 font-mono text-xs border border-dashed border-slate-800 rounded mx-4 my-8">
-                        <Server className="w-8 h-8 mb-3 opacity-20" />
+                      <div className="h-full flex flex-col items-center justify-center text-green-900 font-mono text-xs border border-dashed border-green-900/30 rounded mx-4 my-8 bg-green-900/5">
+                        <Server className="w-8 h-8 mb-3 opacity-50" />
                         [ READY FOR INSTRUCTION ]
                       </div>
                     )}
@@ -253,7 +253,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="h-8 bg-[#0a0c10] border-t border-slate-800 px-4 flex items-center justify-between text-[10px] text-slate-500 font-mono shrink-0">
+      <footer className="h-8 bg-black border-t border-green-900/50 px-4 flex items-center justify-between text-[10px] text-green-700 font-mono shrink-0">
         <div>SERVER: ASIA-SOUTHEAST1-A</div>
         <div className="flex gap-6">
           <span>MODEL: GEMINI-3.5-FLASH</span>

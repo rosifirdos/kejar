@@ -35,7 +35,7 @@ function MermaidChart({ chart }: { chart: string }) {
 
 export function MarkdownRenderer({ content }: { content: string }) {
   return (
-    <div className="markdown-body font-sans text-slate-300 leading-relaxed space-y-4">
+    <div className="markdown-body font-mono text-green-500 leading-relaxed space-y-4">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         components={{
@@ -46,9 +46,9 @@ export function MarkdownRenderer({ content }: { content: string }) {
             }
             if (!inline && match) {
               return (
-                <div className="relative border border-slate-800 rounded bg-[#161920]">
-                  <div className="text-[10px] text-slate-500 absolute right-3 top-2 uppercase font-mono">{match[1]}</div>
-                  <code className={`${className} block overflow-x-auto text-slate-300 p-3 pt-6 my-0 text-xs font-mono`} {...props}>
+                <div className="relative border border-green-900/50 rounded bg-[#0a0a0a]">
+                  <div className="text-[10px] text-green-700 absolute right-3 top-2 uppercase font-mono">{match[1]}</div>
+                  <code className={`${className} block overflow-x-auto text-green-400 p-3 pt-6 my-0 text-xs font-mono`} {...props}>
                     {children}
                   </code>
                 </div>
@@ -56,13 +56,13 @@ export function MarkdownRenderer({ content }: { content: string }) {
             }
             if (!inline) {
                return (
-                <code className="block overflow-x-auto bg-[#161920] text-slate-300 p-3 rounded border border-slate-800 my-2 text-xs font-mono" {...props}>
+                <code className="block overflow-x-auto bg-[#0a0a0a] text-green-400 p-3 rounded border border-green-900/50 my-2 text-xs font-mono" {...props}>
                   {children}
                 </code>
               );
             }
             return (
-              <code className="bg-slate-800 text-blue-400 px-1.5 py-0.5 rounded text-xs font-mono" {...props}>
+              <code className="bg-green-900/30 text-green-300 px-1.5 py-0.5 rounded text-xs font-mono" {...props}>
                 {children}
               </code>
             );
@@ -70,24 +70,24 @@ export function MarkdownRenderer({ content }: { content: string }) {
           pre({ children }) {
             return <pre className="my-4">{children}</pre>;
           },
-          h1: ({children}) => <h1 className="text-xl font-bold text-white mt-6 mb-3 tracking-tight">{children}</h1>,
-          h2: ({children}) => <h2 className="text-lg font-bold text-white mt-5 mb-2 tracking-tight">{children}</h2>,
-          h3: ({children}) => <h3 className="text-sm font-bold uppercase tracking-wider text-slate-400 mt-4 mb-2">{children}</h3>,
+          h1: ({children}) => <h1 className="text-xl font-bold text-green-400 mt-6 mb-3 tracking-tight">{children}</h1>,
+          h2: ({children}) => <h2 className="text-lg font-bold text-green-400 mt-5 mb-2 tracking-tight">{children}</h2>,
+          h3: ({children}) => <h3 className="text-sm font-bold uppercase tracking-wider text-green-600 mt-4 mb-2">{children}</h3>,
           p: ({children}) => <p className="mb-3 text-sm">{children}</p>,
           ul: ({children}) => <ul className="list-disc list-inside mb-4 space-y-1 text-sm">{children}</ul>,
           ol: ({children}) => <ol className="list-decimal list-inside mb-4 space-y-1 text-sm">{children}</ol>,
           table: ({children}) => (
-            <div className="overflow-x-auto my-4 border border-slate-800 rounded">
-              <table className="w-full text-xs text-left text-slate-300 border-collapse">
+            <div className="overflow-x-auto my-4 border border-green-900/50 rounded">
+              <table className="w-full text-xs text-left text-green-500 border-collapse">
                 {children}
               </table>
             </div>
           ),
-          thead: ({children}) => <thead className="text-[10px] uppercase text-slate-500 font-mono border-b border-slate-800 bg-slate-900/50">{children}</thead>,
-          th: ({children}) => <th className="px-3 py-2 border-b border-slate-800">{children}</th>,
-          td: ({children}) => <td className="px-3 py-2 border-b border-slate-800/50">{children}</td>,
-          tr: ({children}) => <tr className="hover:bg-slate-800/30">{children}</tr>,
-          blockquote: ({children}) => <blockquote className="p-3 my-3 border-l-2 border-blue-500 bg-blue-500/10 rounded-r text-sm text-slate-400 italic">{children}</blockquote>,
+          thead: ({children}) => <thead className="text-[10px] uppercase text-green-700 font-mono border-b border-green-900/50 bg-[#0a0a0a]">{children}</thead>,
+          th: ({children}) => <th className="px-3 py-2 border-b border-green-900/50">{children}</th>,
+          td: ({children}) => <td className="px-3 py-2 border-b border-green-900/30">{children}</td>,
+          tr: ({children}) => <tr className="hover:bg-green-900/10">{children}</tr>,
+          blockquote: ({children}) => <blockquote className="p-3 my-3 border-l-2 border-green-500 bg-green-500/10 rounded-r text-sm text-green-600 italic">{children}</blockquote>,
         }}
       >
         {content}

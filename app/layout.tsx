@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="id" className={`${inter.variable} ${jetbrainsMono.variable} dark`} style={{ height: '100%', margin: 0 }}>
       <body 
-        className="bg-[#0f1115] text-slate-300 h-full flex flex-col font-sans overflow-hidden selection:bg-blue-500/30 selection:text-white antialiased" 
+        className="bg-black text-green-500 h-full flex flex-col font-mono overflow-hidden selection:bg-green-500/30 selection:text-white antialiased" 
         style={{ margin: 0 }}
       >
         {children}
