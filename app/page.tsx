@@ -92,7 +92,7 @@ export default function Home() {
       <header className="h-14 bg-[#0a0a0a] border-b border-green-900/50 flex items-center justify-between px-6 shrink-0">
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-green-900/50 border border-green-500/30 rounded flex items-center justify-center font-bold text-green-400 text-sm">KJ</div>
+            <div className="w-8 h-8 bg-green-900/50 border border-green-500/30 rounded flex items-center justify-center font-bold text-green-400 text-sm">{">_"}</div>
             <h1 className="text-lg font-bold tracking-tight text-green-500">KeJar <span className="text-green-700 font-light">| Kendali Jaringan</span></h1>
           </div>
           <div className="h-4 w-[1px] bg-green-900/50 mx-2"></div>
