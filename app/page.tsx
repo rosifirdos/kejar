@@ -62,11 +62,22 @@ export default function Home() {
       });
 
       if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}));
-        throw new Error(errorData.error || 'Gagal menghubungi KeJar AI Engine');
+        const errorText = await response.text();
+        let errorMsg = 'Gagal menghubungi KeJar AI Engine';
+        try {
+          const errorData = JSON.parse(errorText);
+          if (errorData.error) errorMsg = errorData.error;
+        } catch (e) {}
+        throw new Error(errorMsg);
       }
 
-      const data = await response.json();
+      const responseText = await response.text();
+      let data;
+      try {
+        data = JSON.parse(responseText);
+      } catch (e) {
+        throw new Error(`Invalid JSON from server. Response starts with: ${responseText.slice(0, 50)}...`);
+      }
       setResults(prev => ({ ...prev, [activeTab]: data.text }));
     } catch (error: any) {
       setResults(prev => ({ ...prev, [activeTab]: `error\nTerjadi kesalahan: ${error.message}` }));
