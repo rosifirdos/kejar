@@ -101,19 +101,6 @@ export default function Home() {
             <span className="text-green-500 uppercase tracking-wider">Core System Operational</span>
           </div>
         </div>
-        <div className="flex items-center gap-6 text-xs uppercase tracking-widest font-medium">
-          <div className="flex flex-col items-end">
-            <span className="text-green-700">Service Uptime</span>
-            <span className="text-green-400">99.982%</span>
-          </div>
-          <div className="flex flex-col items-end">
-            <span className="text-green-700">AI Confidence</span>
-            <span className="text-green-400">97.2%</span>
-          </div>
-          <div className="h-8 w-8 rounded bg-[#050505] border border-green-900/50 flex items-center justify-center text-green-500 text-[10px]">
-             AI
-          </div>
-        </div>
       </header>
 
       {/* Main Content */}
@@ -140,19 +127,6 @@ export default function Home() {
                 </button>
               );
             })}
-          </div>
-
-          <div className="mt-auto px-4 py-4 border-t border-green-900/50">
-            <div className="bg-[#050505] rounded p-3 border border-green-900/50">
-              <div className="text-[10px] text-green-700 mb-1 uppercase font-mono">System Load</div>
-              <div className="h-1 bg-black rounded-full overflow-hidden border border-green-900/30">
-                <div className="w-1/3 h-full bg-green-500"></div>
-              </div>
-              <div className="mt-2 flex justify-between text-[10px] font-mono">
-                <span className="text-green-700">AI Compute</span>
-                <span className="text-green-400">32%</span>
-              </div>
-            </div>
           </div>
         </nav>
 
