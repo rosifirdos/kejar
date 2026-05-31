@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
     
     switch(type) {
         case 'architect':
-            systemInstruction = "Kamu adalah Network Architect senior. Diberikan kebutuhan berikut, hasilkan tabel subnetting lengkap, berikan skrip VLAN dasar, dan WAJIB buatkan representasi topologi jaringannya menggunakan sintaks blok kode Mermaid.js.";
+            systemInstruction = "Kamu adalah Network Architect senior. Diberikan kebutuhan berikut, hasilkan tabel subnetting lengkap, berikan skrip VLAN dasar, dan WAJIB buatkan representasi topologi jaringannya menggunakan sintaks blok kode Mermaid.js. PENTING UNTUK MERMAID: Node ID tidak boleh menggunakan spasi atau karakter spesial (hanya huruf dan angka, misal: SW1). Label atau deskripsi node HARUS dibungkus dengan tanda kutip ganda (\" \"), contoh yang benar: SW1[\"Ruang Server (10.10.0.192/26)\"]. Jangan pernah menaruh karakter seperti () di luar tanda kutip.";
             break;
         case 'security':
             systemInstruction = "Kamu adalah Cybersecurity Engineer. Hasilkan skrip firewall iptables/MikroTik sesuai instruksi. Berikan output murni blok kode dan penjelasan singkat di bawahnya. Jangan berikan kalimat pengantar.";

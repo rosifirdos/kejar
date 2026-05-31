@@ -1,6 +1,5 @@
-import { Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
-import type { Metadata } from 'next';
+import { Inter, JetBrains_Mono } from 'next/font/google';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -12,9 +11,9 @@ const jetbrainsMono = JetBrains_Mono({
   variable: '--font-mono',
 });
 
-export const metadata: Metadata = {
-  title: 'KeJar | Kendali Jaringan',
-  description: 'AI-Powered Network Operations Center',
+export const metadata = {
+  title: 'KeJar - Kendali Jaringan',
+  description: 'Workload & Network Optimizer',
 };
 
 export default function RootLayout({
@@ -23,10 +22,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="id" className={`${inter.variable} ${jetbrainsMono.variable} dark`} style={{ height: '100%', margin: 0 }}>
+    <html lang="id" className="h-full">
       <body 
-        className="bg-black text-green-500 h-full flex flex-col font-mono overflow-hidden selection:bg-green-500/30 selection:text-white antialiased" 
-        style={{ margin: 0 }}
+        className={`${inter.variable} ${jetbrainsMono.variable} bg-slate-50 text-slate-800 h-full flex flex-col font-sans overflow-hidden selection:bg-cyan-500/30 selection:text-cyan-900 antialiased`} 
       >
         {children}
       </body>
